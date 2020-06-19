@@ -1,6 +1,6 @@
 #Manejo de strings
 
-mensaje = "Mariana será una DIOSA y le gustará"
+mensaje = "Será una DIOSA y le gustará"
 
 #print(args str)|print(str args) -> Imprime en consola el resultado de los argumentos
 print("\nMÉTODO PRINT\n")
@@ -56,7 +56,7 @@ CORTAR
 Operador con corchetes str[inicio:final]
 de [0 a 3]
 """
-mensaje = "Mariana será una DIOSA y le gustará"
+mensaje = "Será una DIOSA y le gustará"
 print(mensaje[0:7])
 
 """
@@ -83,7 +83,7 @@ print(mensaje.center(37, '-'))
 Argumentos: suffix (char) caracter a buscar; start y end son posiciones
 Retorna True si existe o False si no
 """
-registro="1;Mariana;20;1000;"
+registro="1;Pablo;20;1000;"
 print("\nMÉTODO ENDSWITH")
 print(f"¿El registro termina en ';'?: {registro.endswith(';')}")
 print(registro[2:10])
