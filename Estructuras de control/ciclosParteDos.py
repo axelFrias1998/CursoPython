@@ -25,3 +25,5 @@ else:
 
 for contador in range(0, 20, 10):
     print(f"Artículo {contador}")
+
+
