@@ -1,3 +1,5 @@
+if __name__ == "__main__":
+    main()
 def main():
     print("REGISTROS")
     numeroPersonas = int(input("¿Cuántas personas quieres registrar? ")) 
@@ -40,8 +42,7 @@ def lecturaRegistros(listaPersonas):
         print(registro[4].center(10, " "), end="|\n")
     print("|-----------------|")
 
-if __name__ == "__main__":
-    main()
+
 
 """
 |Mariana|20|F|200|FIADSADS|
