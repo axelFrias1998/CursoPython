@@ -42,7 +42,7 @@ def main():
 
             elif seleccion == 4:
                 os.system("clear")
-            
+                actualizar(listaProductos)
             elif seleccion == 5:
                 os.system("clear")
                 print("SALIENDO")
@@ -54,12 +54,12 @@ def main():
             print(f"Tipo de dato incorrecto. ERROR: {valueError}")
         
 def nuevoProducto(listaProductos):
+    key = 0
+    if len(listaProductos) == 0:
+        key = 1
+    else:
+        key = listaProductos[len(listaProductos) - 1][0] + 1
     try:
-        key = 0
-        if len(listaProductos) == 0:
-            key = 1
-        else:
-            key = listaProductos[len(listaProductos) - 1][0] + 1
         nombreProducto = input("Ingresa su nombre: ")
         costoCompra = float(input("Ingresa sus fondos: "))
         return [key, nombreProducto, costoCompra]
@@ -86,6 +86,30 @@ def eliminar(listaProductos):
     print("No existe el producto")
     return None
 
+def actualizar(listaProductos):
+    imprimirProductos(listaProductos)
+    try:
+        seleccion = int(input("¿Cuál registro deseas actualizar? (ID): "))
+        for producto in listaProductos:
+            if producto[0] == seleccion:
+                print(f"Vas a modificar el registro:\n\t|{producto[0]}|{producto[1]}|${producto[2]}|")
+                #Igualar con el registro NO RECOMENDABLE
+                #producto[1] = input("Nuevo nombre: ")
+                #producto[2] = float(input("Nuevo costo: $"))
+                print("OPRIME ENTER SI NO DESEAS NINGÚN CAMBIO")
+                nuevoNombre = input("Ingresa el nuevo nombre del producto: ")
+                if nuevoNombre != "":
+                    producto[1] = nuevoNombre
+                nuevoPrecio = input("Ingresa el nuevo costo del producto: $")
+                if nuevoPrecio != "":
+                    producto[2] = float(nuevoPrecio)
+
+    except ValueError as valueError:
+        print(f"Tipo de dato incorrecto. ERROR: {valueError}")
+    
+    
+    print("No existe el producto")
+    
 
 if __name__ == "__main__":
     main()
