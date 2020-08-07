@@ -1,0 +1,3 @@
+Hola mundo en archivos!
+1;MARIANA;MAR23132
+2;AXEL;FIHA9809
